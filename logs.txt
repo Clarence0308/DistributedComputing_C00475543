@@ -1,0 +1,250 @@
+===== 1. ls =====
+a.out
+aws
+awscliv2.zip
+logs.txt
+===== 2. pwd =====
+/home/ubuntu
+===== 3. uname =====
+Linux
+===== 4. hostname =====
+ip-172-31-47-120
+===== 5. whoami =====
+ubuntu
+===== 6. df -h =====
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/root        6.7G  2.7G  4.0G  40% /
+tmpfs            455M     0  455M   0% /dev/shm
+tmpfs            182M  888K  181M   1% /run
+efivarfs         128K  3.3K  120K   3% /sys/firmware/efi/efivars
+none             1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs            455M     0  455M   0% /tmp
+none             1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/nvme0n1p13  989M   96M  827M  11% /boot
+/dev/nvme0n1p15  105M  6.3M   99M   7% /boot/efi
+none             1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+none             1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+none             1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+tmpfs             91M  8.0K   91M   1% /run/user/1000
+===== 7. du -sh . =====
+342M	.
+===== 8. cat /etc/os-release =====
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+===== 9. head /etc/passwd =====
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+===== 10. tail /etc/passwd =====
+tss:x:987:987:tss user for tpm2:/:/usr/sbin/nologin
+uuidd:x:101:103::/run/uuidd:/usr/sbin/nologin
+sshd:x:986:65534:sshd user:/run/sshd:/usr/sbin/nologin
+pollinate:x:102:1::/var/cache/pollinate:/bin/false
+tcpdump:x:985:985:tcpdump:/nonexistent:/usr/sbin/nologin
+landscape:x:103:106::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:984:984:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+polkitd:x:983:983:User for polkitd:/:/usr/sbin/nologin
+ec2-instance-connect:x:104:65534::/nonexistent:/usr/sbin/nologin
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+===== 11. ps =====
+    PID TTY          TIME CMD
+   1148 pts/0    00:00:00 bash
+   1353 pts/0    00:00:00 ps
+===== 12. top =====
+top - 23:26:13 up 2 min,  1 user,  load average: 0.09, 0.14, 0.06
+Tasks: 118 total,   1 running, 117 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  4.5 sy,  0.0 ni, 90.9 id,  4.5 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :    908.7 total,    414.2 free,    309.7 used,    299.0 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    599.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   24772  15420  10860 S   0.0   1.7   0:01.43 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      9 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     11 root      20   0       0      0      0 I   0.0   0.0   0:00.05 kworker+
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.04 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.02 rcu_sch+
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp+
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp+
+     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migrati+
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kprobe-+
+     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     22 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     23 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     24 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migrati+
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     26 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmp+
+     29 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     30 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+     31 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+     32 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd
+     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungta+
+     34 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_rea+
+     35 root      20   0       0      0      0 I   0.0   0.0   0:00.06 kworker+
+     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     37 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kcompac+
+     38 root      20   0       0      0      0 I   0.0   0.0   0:00.04 kworker+
+     39 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+     40 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepa+
+     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     43 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     44 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-a+
+     45 root      20   0       0      0      0 I   0.0   0.0   0:00.05 kworker+
+     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     51 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     52 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     53 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     54 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdo+
+     55 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     56 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0
+     57 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptf+
+     58 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     59 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     60 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     61 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     62 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     63 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     64 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     65 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     66 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     67 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     69 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     81 root      20   0       0      0      0 S   0.0   0.0   0:00.00 jbd2/nv+
+     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     83 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    117 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    123 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+    129 root      19  -1   42176  15748  14388 S   0.0   1.7   0:00.23 systemd+
+    145 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    147 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    163 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    168 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    172 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    179 root     -11   0  279208   9364   7292 S   0.0   1.0   0:00.03 multipa+
+    183 systemd+  20   0   22392  14012  11332 S   0.0   1.5   0:00.09 systemd+
+    196 root      20   0   39032  13520   8708 S   0.0   1.5   0:00.35 systemd+
+    200 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+    254 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    266 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    267 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    290 root      20   0       0      0      0 S   0.0   0.0   0:00.00 jbd2/nv+
+    291 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    499 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    520 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    538 systemd+  20   0   24648  12300  10712 S   0.0   1.3   0:00.10 systemd+
+    580 root      20   0    2824   2028   1880 S   0.0   0.2   0:00.00 acpid
+    582 root      20   0    2908   2016   1892 S   0.0   0.2   0:00.04 chronyd+
+    584 root      20   0    7488   2988   2740 S   0.0   0.3   0:00.00 cron
+    585 message+  20   0    8744   5140   4216 S   0.0   0.6   0:00.06 dbus-da+
+    596 root      20   0   80796   3916   3620 S   0.0   0.4   0:00.06 irqbala+
+    600 root      20   0   46808  29800  14644 S   0.0   3.2   0:00.19 network+
+    602 polkitd   20   0  381776  10140   7584 S   0.0   1.1   0:00.13 polkitd
+    609 root      20   0 1885164  39488  25728 S   0.0   4.2   0:00.33 snapd
+    614 root      20   0   18172   9008   7752 S   0.0   1.0   0:00.08 systemd+
+    617 root      20   0  543184  14876  12520 S   0.0   1.6   0:00.09 udisksd
+    640 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    664 root      20   0   10712   7520   6344 S   0.0   0.8   0:00.01 sshd
+    673 root      20   0    8280   2704   2504 S   0.0   0.3   0:00.00 agetty
+    685 root      20   0    8236   2508   2320 S   0.0   0.3   0:00.00 agetty
+    715 _chrony   20   0   20264   6180   5400 S   0.0   0.7   0:00.01 chronyd
+    718 _chrony   20   0   11936   2356   1716 S   0.0   0.3   0:00.00 chronyd
+    730 root      20   0  126208  32224  17608 S   0.0   3.5   0:00.17 unatten+
+    795 root      20   0  333748  13244  11284 S   0.0   1.4   0:00.09 ModemMa+
+    805 syslog    20   0  220304   5696   4128 S   0.0   0.6   0:00.07 rsyslogd
+    995 root      20   0 1759280  23568  12000 S   0.0   2.5   0:00.17 amazon-+
+   1023 root      20   0   18112  11836   9792 S   0.0   1.3   0:00.01 sshd-se+
+   1029 ubuntu    20   0   21972  12676  10336 S   0.0   1.4   0:00.12 systemd
+   1031 ubuntu    20   0   22736   4184   2168 S   0.0   0.4   0:00.00 (sd-pam)
+   1145 ubuntu    20   0   18412   7784   5452 S   0.0   0.8   0:00.13 sshd-se+
+   1148 ubuntu    20   0    9280   5444   3772 S   0.0   0.6   0:00.07 bash
+   1364 ubuntu    20   0   10964   5296   3244 R   0.0   0.6   0:00.00 top
+===== 13. ip addr =====
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:ff:c7:24:8f:f1 brd ff:ff:ff:ff:ff:ff
+    altname enp0s5
+    altname enx0affc7248ff1
+    inet 172.31.47.120/20 metric 100 brd 172.31.47.255 scope global dynamic ens5
+       valid_lft 3440sec preferred_lft 3440sec
+    inet6 fe80::8ff:c7ff:fe24:8ff1/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+===== 14. ping =====
+PING google.com (142.251.210.238) 56(84) bytes of data.
+64 bytes from pnorda-as-in-f14.1e100.net (142.251.210.238): icmp_seq=1 ttl=117 time=8.81 ms
+64 bytes from pnorda-as-in-f14.1e100.net (142.251.210.238): icmp_seq=2 ttl=117 time=8.80 ms
+64 bytes from pnorda-as-in-f14.1e100.net (142.251.210.238): icmp_seq=3 ttl=117 time=8.80 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.798/8.800/8.805/0.003 ms
+===== 15. git --version =====
+git version 2.53.0
+===== 16. tmux -V =====
+tmux 3.6
+===== 17. chmod =====
+drwxr-xr-x 2 ubuntu ubuntu 4096 Sep 22 23:26 testdir
+===== 18. ls -la =====
+total 71792
+drwxr-x--- 8 ubuntu ubuntu     4096 Sep 22 23:26 .
+drwxr-xr-x 3 root   root       4096 Sep 17 16:07 ..
+drwxrwxr-x 4 ubuntu ubuntu     4096 Sep 17 16:34 .aws
+-rw------- 1 ubuntu ubuntu     1004 Sep 17 17:03 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu      220 Feb 13  2026 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu     3771 Feb 13  2026 .bashrc
+drwx------ 2 ubuntu ubuntu     4096 Sep 17 16:12 .cache
+drwx------ 3 ubuntu ubuntu     4096 Sep 22 23:26 .config
+-rw------- 1 ubuntu ubuntu       20 Sep 17 16:52 .lesshst
+-rw-r--r-- 1 ubuntu ubuntu      807 Feb 13  2026 .profile
+drwx------ 2 ubuntu ubuntu     4096 Sep 17 16:07 .ssh
+-rw-rw-r-- 1 ubuntu ubuntu        0 Sep 17 16:53 a.out
+drwxr-xr-x 3 ubuntu ubuntu     4096 Sep 16 18:46 aws
+-rw-rw-r-- 1 ubuntu ubuntu 73443249 Sep 17 16:22 awscliv2.zip
+-rw-rw-r-- 1 ubuntu ubuntu    14013 Sep 22 23:26 logs.txt
+drwxr-xr-x 2 ubuntu ubuntu     4096 Sep 22 23:26 testdir
+===== 19. id =====
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),102(lxd)
+===== 20. free -h =====
+               total        used        free      shared  buff/cache   available
+Mem:           908Mi       306Mi       412Mi       2.7Mi       303Mi       602Mi
+Swap:             0B          0B          0B
